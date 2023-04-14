@@ -9,5 +9,6 @@ export default defineConfig({
     rollupOptions: {
       external: (id) => id.startsWith("file-loader!"),
     },
+    base: "/rainhackers-landing",
   },
 });
