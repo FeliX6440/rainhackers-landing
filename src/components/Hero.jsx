@@ -45,15 +45,15 @@ const Hero = () => {
           variants={ctaVariants}
           href="mailto: welcome@rainhackers.com?subject=Kontaktanfrage%20RainHackers"
         >
-          Contact Us
+          CONTACT US
         </motion.a>
       </motion.section>
       <br></br>
       <a
         onClick={() => window.open("/assets/presentation.pdf", "_blank")}
-        class="text-white hover:bg-white hover:text-black transition-all duration-300"
+        class="text-white hover:bg-white hover:text-black transition-all duration-300 pr-2 pl-2 cursor-pointer"
       >
-        <span class="font-bold">SEE OUR PITCHDECK</span>
+        <span class="font-bold"> SEE OUR PITCHDECK </span>
       </a>
     </div>
   );

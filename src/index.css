@@ -25,12 +25,10 @@
   max-height: 300px;
 }
 
-
-
 .cta {
   display: inline-block;
   padding: 10px 30px;
-  color: #6c63ff;
+  color: #251144;
   background-color: #fff;
   font-weight: 600;
   clip-path: polygon(3% 0, 100% 0, 100% 100%, 0% 100%);
@@ -39,7 +37,7 @@
   width: 240px;
 }
 .cta:hover {
-  background-color: #000;
+  background-color: #251144;
   color: #fff;
 }
 
@@ -56,7 +54,7 @@
   width: 240px;
 }
 .cta2:hover {
-  background-color: #000;
+  background-color: #251144;
   color: #fff;
 }
 
