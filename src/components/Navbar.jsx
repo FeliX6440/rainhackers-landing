@@ -66,7 +66,7 @@ const Navbar = () => {
         </a>
         <a
           className="block py-2 px-4 text-gray-500 hover:text-gray-800"
-          href="##pitchdeck"
+          onClick={() => window.open("/assets/presentation.pdf", "_blank")}
         >
           Pitch Deck
         </a>

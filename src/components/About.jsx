@@ -85,45 +85,6 @@ const About = () => {
           <Principle key={index} {...principle} />
         ))}
       </div>
-      <div className="flex justify-center mt-6">
-        <div
-          className="relative w-max mx-auto flex items-center justify-center"
-          style={{
-            backgroundImage: `url(${WatercolorSplash})`,
-            backgroundSize: "contain", // Increase the size of the watercolor splash
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            height: "120px", // Set a fixed height for the div containing the splash
-          }}
-        >
-          <button
-            className="cta2 mb-5 py-2 px-10 bg-white text-black rounded-full flex items-center justify-center space-x-2"
-            id="#pitchdeck"
-            onClick={() => window.open("/assets/presentation.pdf", "_blank")}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              // Media query to adjust height and width on screens smaller than 600px wide
-              "@media (max-width: 600px)": {
-                minWidth: "200px",
-                maxWidth: "200px",
-                maxHeight: "30px",
-                minHeight: "30px",
-              },
-              "@media (min-width: 600px)": {
-                minWidth: "200px",
-                maxWidth: "200px",
-                maxHeight: "40px",
-                minHeight: "40px",
-              },
-            }}
-          >
-            <AiOutlineFileText className="text-xl" />
-            <span className="text-base">Pitch Deck</span>
-          </button>
-        </div>
-      </div>
     </section>
   );
 };
