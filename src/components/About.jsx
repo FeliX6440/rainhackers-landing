@@ -8,21 +8,31 @@ import { AiOutlineFileText } from "react-icons/ai";
 
 const Principle = ({ title, description, imgSrc, imgAlt, reverse }) => (
   <div
-    className={`flex flex-row${
-      reverse ? " flex-row-reverse" : ""
-    } items-center space-x-4 lg:space-x-8 font-montserrat mb-6 mt-6`}
+    className={`flex flex-col md:flex-row${
+      reverse ? " md:flex-row-reverse" : ""
+    } items-center space-y-4 md:space-x-4 lg:space-x-8 font-montserrat mb-6 mt-6`}
   >
     <img
       src={imgSrc}
       alt={imgAlt}
       className="w-auto h-32 lg:h-56 mx-auto lg:mx-0"
     />
-    <div className={`w-65 lg:w-auto ${reverse ? "text-right" : "text-left"}`}>
-      <h3 className="text-2xl lg:text-3xl font-bold text-purple-700">
+    <div
+      className={`w-full md:w-auto md:text-${reverse ? "right" : "left"} ${
+        reverse ? "text-right md:text-left" : "text-left md:text-right"
+      } `}
+    >
+      <h3
+        className={`text-2xl lg:text-3xl font-bold text-purple-700 text-center md:text-${
+          reverse ? "right" : "left"
+        } md:mb-0`}
+      >
         {title}
       </h3>
       <p
-        className="text-xl lg:text-xl"
+        className={`text-lg md:text-xl text-center md:text-${
+          reverse ? "right" : "left"
+        }`}
         dangerouslySetInnerHTML={{ __html: description }}
       />
     </div>
@@ -34,7 +44,7 @@ const About = () => {
     {
       title: "The Art of Creating New Business: Rainmaking",
       description:
-        "<strong>HACKING THE SALES CODE:</strong>So wie die Schamanen in der Trockenzeit Wasser herbeigezaubert haben, sorgen wir für Ihren Vertriebserfolg in schwierigen Zeiten.",
+        "<strong>HACKING THE SALES CODE: </strong>So wie die Schamanen in der Trockenzeit Wasser herbeigezaubert haben, sorgen wir für Ihren Vertriebserfolg in schwierigen Zeiten.",
       imgSrc: rainmakerImg,
       imgAlt: "Rainmaker Illustration",
       reverse: false,
@@ -42,7 +52,7 @@ const About = () => {
     {
       title: "Solving the Bottleneck: Growth Hacking for Success",
       description:
-        "<strong>NO LIMITS:</strong>Wir identifizieren und hacken die Engpässe in Ihrem Unternehmen. Damit mehr Sales auch zu mehr Umsatz führt – und zu einem größeren Wachstum.",
+        "<strong>NO LIMITS: </strong>Wir identifizieren und hacken die Engpässe in Ihrem Unternehmen. Damit mehr Sales auch zu mehr Umsatz führt – und zu einem größeren Wachstum.",
       imgSrc: growthHackingImg,
       imgAlt: "Growth Hacking Illustration",
       reverse: true,
@@ -68,7 +78,7 @@ const About = () => {
           "font-montserrat"
         )}
       >
-        Fundamentale Prinzipien
+        Our Key Principles
       </h2>
       <div className={classNames("flex", "flex-col", "items-center")}>
         {principles.map((principle, index) => (
@@ -87,33 +97,30 @@ const About = () => {
           }}
         >
           <button
-            className={classNames(
-              "text-2xl",
-              "font-bold",
-              "mb-10",
-              "mt-6",
-              "text-gray-800",
-              "text-center",
-              "font-montserrat",
-              "bg-gray-100",
-              "py-3",
-              "px-6",
-              "rounded",
-              "hover:bg-gray-200",
-              "transition",
-              "duration-200",
-              "ease-in-out",
-              "flex",
-              "items-center",
-              "justify-center",
-              "shadow-md",
-              "relative"
-            )}
+            className="cta2 mb-5 py-2 px-10 bg-white text-black rounded-full flex items-center justify-center space-x-2"
             id="#pitchdeck"
             onClick={() => window.open("/assets/presentation.pdf", "_blank")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              // Media query to adjust height and width on screens smaller than 600px wide
+              "@media (max-width: 600px)": {
+                minWidth: "200px",
+                maxWidth: "200px",
+                maxHeight: "30px",
+                minHeight: "30px",
+              },
+              "@media (min-width: 600px)": {
+                minWidth: "200px",
+                maxWidth: "200px",
+                maxHeight: "40px",
+                minHeight: "40px",
+              },
+            }}
           >
-            <AiOutlineFileText className="mr-2" />
-            Pitch Deck
+            <AiOutlineFileText className="text-xl" />
+            <span className="text-base">Pitch Deck</span>
           </button>
         </div>
       </div>

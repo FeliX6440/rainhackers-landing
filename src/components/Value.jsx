@@ -23,31 +23,11 @@ const Value = () => {
         }}
       >
         <div className="w-full p-0 md:p-0">
-          <h2 className="text-white text-4xl md:text-6xl text-center mb-12 mt-12">
-            IMPRESSUM
+          <h2 className="text-white text-3xl font-bold md:text-4xl text-center mb-8 mt-8">
+            Impressum
           </h2>
           <div className="location-card bg-white bg-opacity-100 shadow-lg rounded-lg p-4 text-center flex flex-col items-center justify-center">
-            <div
-              className="map-container rounded-md w-screen h-96 md:h-auto"
-              style={{ height: "300px" }}
-            >
-              <MapContainer
-                center={position}
-                zoom={16}
-                scrollWheelZoom={false}
-                className="w-full h-full rounded-md"
-                style={{ maxWidth: "100%" }}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                  url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-                />
-                <Marker position={position}>
-                  <Popup>Bellevuestraße 1, 10785 Berlin, Germany</Popup>
-                </Marker>
-              </MapContainer>
-            </div>
-            <div className="text-container mt-4">
+            <div className="text-container mt-0">
               <p className="company-name text-lg">RAINHACKERS AG i. G.</p>
               <p className="management">
                 Management: Lutz Fromme, Lorenz Fromme

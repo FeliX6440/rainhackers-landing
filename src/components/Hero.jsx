@@ -50,7 +50,7 @@ const Hero = () => {
       </motion.section>
       <br></br>
       <a
-        href="##pitchdeck"
+        onClick={() => window.open("/assets/presentation.pdf", "_blank")}
         class="text-white hover:bg-white hover:text-black transition-all duration-300"
       >
         <span class="font-bold">SEE OUR PITCHDECK</span>

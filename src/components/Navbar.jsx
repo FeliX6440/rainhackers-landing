@@ -22,24 +22,26 @@ const Navbar = () => {
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-1">
-            <a
-              className="py-4 px-2 text-gray-500 hover:text-gray-800"
-              href="#about"
-            >
-              Key Principles
-            </a>
-            <a
-              className="py-4 px-2 text-gray-500 hover:text-gray-800"
-              href="##pitchdeck"
-            >
-              Pirch Deck
-            </a>
-            <a
-              className="py-4 px-2 text-gray-500 hover:text-gray-800"
-              href="#impressum"
-            >
-              Impressum
-            </a>
+            <strong>
+              <a
+                className="py-5 px-3 text-gray-500 hover:text-gray-800"
+                href="#about"
+              >
+                Key Principles
+              </a>
+              <a
+                className="py-5 px-3 text-gray-500 hover:text-gray-800"
+                href="##pitchdeck"
+              >
+                Pitch Deck
+              </a>
+              <a
+                className="py-5 px-3 text-gray-500 hover:text-gray-800"
+                href="#impressum"
+              >
+                Impressum
+              </a>
+            </strong>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
